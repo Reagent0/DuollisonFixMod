@@ -17,7 +17,7 @@ Step 1: Download UE4SS ([UE4SS_v3.0.1-823-g3e2d111.zip](https://github.com/UE4SS
 Step 2: Locate the directory containing the E33 **actual** executable, aka the install directory. **IMPORTANT:** The executable you're looking for should be called `SandFall-Win64-Shipping.exe`. If you've installed the game from Steam, the directory should be `C:\Program Files (x86)\Steam\steamapps\common\Expedition 33\Sandfall\Binaries\Win64`.  
 Step 3: Once you have located the install directory, extract the contents of the zip you downloaded in Step 1 in there. The install directory should now have a new ue4ss folder and a dwmapi.dll file. If you did everything correctly, good! UE4SS is installed.
 
-#### Installing MartenonFixMod  
+#### Installing DuollisonFixMod  
 For clarity purposes, I'll refer to the path to the directory you located in the previous phase as `InstallDirectory`.  
 Step 1: Download the [latest release of DuollisonFixMod](https://github.com/Reagent0/DuollisonFixMod/releases/latest/download/DuollisonFixMod.zip).  
 Step 2: Open the zip folder you just downloaded and extract its content (a DuollisonFixMod folder) to `InstallDirectory\ue4ss\Mods`.  
