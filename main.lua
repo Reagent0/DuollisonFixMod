@@ -37,18 +37,16 @@ local fn_consumeForetell = c_foretellComponent .. ":ConsumeForetell"
 local hooked = false
 local preId, postId = -1, -1
 preId, postId = RegisterHook("/Script/Engine.PlayerController:ClientRestart", function()
-    ExecuteWithDelay(2000, function()
-        RegisterHook(fn_onBattleDependenciesLoaded, function()
-            LogLine("Battle dependencies loaded!")
-            if not hooked then
-                local foretellComponent = StaticFindObject(c_foretellComponent)
-                if foretellComponent:IsValid() then
-                    LogLine("foretellComponent found! Registering hook..")
-                    RegisterHook(fn_consumeForetell, ConsumeForetell)
-                    hooked = true
-                end
+    RegisterHook(fn_onBattleDependenciesLoaded, function()
+        LogLine("Battle dependencies loaded!")
+        if not hooked then
+            local foretellComponent = StaticFindObject(c_foretellComponent)
+            if foretellComponent:IsValid() then
+                LogLine("foretellComponent found! Registering hook..")
+                RegisterHook(fn_consumeForetell, ConsumeForetell)
+                hooked = true
             end
-        end)
+        end
     end)
     UnregisterHook("/Script/Engine.PlayerController:ClientRestart", preId, postId)
 end)
